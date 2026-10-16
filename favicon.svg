@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a6572" />
+      <stop offset="60%" stop-color="#d4af94" />
+      <stop offset="100%" stop-color="#f5d6ba" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#607d8b" />
+      <stop offset="100%" stop-color="#37474f" />
+    </linearGradient>
+  </defs>
+  <!-- Background Disc -->
+  <circle cx="32" cy="32" r="30" fill="url(#skyGrad)" stroke="#f7e1b5" stroke-width="2"/>
+  <!-- Morning Sun -->
+  <circle cx="32" cy="34" r="8" fill="#ffd180" opacity="0.95" />
+  <!-- Distant Hill / Trees -->
+  <path d="M 4 40 Q 20 34 36 38 Q 48 35 60 41 L 60 62 L 4 62 Z" fill="#2d3b36" opacity="0.7"/>
+  <!-- River -->
+  <path d="M 4 45 Q 24 43 38 46 Q 52 44 60 48 L 60 62 L 4 62 Z" fill="url(#waterGrad)"/>
+  <!-- Foreground Grass Clump -->
+  <path d="M 12 60 Q 14 50 10 46 Q 16 52 16 60 M 16 60 Q 18 48 22 44 Q 20 52 18 60 M 20 60 Q 25 51 28 49 Q 24 55 22 60" stroke="#8bc34a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Small Boat -->
+  <path d="M 38 47 Q 44 50 50 47 Q 44 48 38 47 Z" fill="#422518"/>
+</svg>

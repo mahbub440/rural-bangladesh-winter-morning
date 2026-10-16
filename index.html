@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>শীতের সকাল | A Winter Morning in Rural Bangladesh</title>
+    <meta name="description" content="A cinematic, immersive 2D animated panorama depicting a peaceful winter morning in 1990s rural Bangladesh built with HTML5 Canvas & Web Audio API.">
+    <meta name="author" content="Mahbubur Rahman Sayem">
+    <meta name="theme-color" content="#4a6572">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="শীতের সকাল | A Winter Morning in Rural Bangladesh">
+    <meta property="og:description" content="A cinematic, immersive 2D animated panorama depicting a peaceful winter morning in 1990s rural Bangladesh.">
+    <meta property="og:url" content="https://mahbub440.github.io/rural-bangladesh-winter-morning/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="scene-canvas"></canvas>
+
+    <div id="ui-overlay">
+        <div id="title-area">
+            <h1 class="bengali-title">শীতের সকাল</h1>
+            <p class="subtitle">A Winter Morning in Rural Bangladesh</p>
+        </div>
+        <div id="controls">
+            <button id="sound-toggle" title="Toggle Sound" aria-label="Toggle sound">
+                <span class="icon">🔇</span>
+            </button>
+            <button id="pause-toggle" title="Pause / Resume" aria-label="Pause or resume animation">
+                <span class="icon">⏸</span>
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

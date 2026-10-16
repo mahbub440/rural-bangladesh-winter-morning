@@ -1,0 +1,134 @@
+/* === RESET & FULL VIEWPORT === */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #0d1520;
+    font-family: 'Noto Sans Bengali', 'Playfair Display', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* === CANVAS === */
+#scene-canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: default;
+}
+
+/* === UI OVERLAY === */
+#ui-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    user-select: none;
+}
+
+/* === TITLE === */
+#title-area {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    color: rgba(255, 255, 245, 0.88);
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    opacity: 0;
+    animation: fadeInTitle 3s ease-out 1s forwards;
+}
+
+.bengali-title {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.65;
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+}
+
+@keyframes fadeInTitle {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === CONTROLS === */
+#controls {
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+    display: flex;
+    gap: 12px;
+    pointer-events: auto;
+    opacity: 0;
+    animation: fadeInTitle 2s ease-out 2.5s forwards;
+}
+
+#controls button {
+    background: rgba(10, 15, 25, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.85);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+}
+
+#controls button:hover {
+    background: rgba(10, 15, 25, 0.55);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: scale(1.08);
+}
+
+#controls button:active {
+    transform: scale(0.95);
+}
+
+.icon {
+    pointer-events: none;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    .bengali-title { font-size: 1.1rem; }
+    .subtitle { font-size: 0.65rem; }
+    #title-area { top: 16px; left: 18px; }
+    #controls { bottom: 16px; right: 16px; }
+    #controls button { width: 34px; height: 34px; font-size: 0.85rem; }
+}
+
+@media (max-width: 400px) {
+    .bengali-title { font-size: 0.95rem; }
+    .subtitle { display: none; }
+}
